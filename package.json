@@ -38,9 +38,11 @@
     "emulate:save": "firebase emulators:start --import=./saved-data --export-on-exit=./saved-data"
   },
   "dependencies": {
+    "@vee-validate/yup": "^4.10.8",
     "@vueuse/core": "^10.2.1",
     "firebase": "^10.0.0",
     "pinia": "^2.1.4",
+    "vee-validate": "^4.10.8",
     "vue": "^3.3.4",
     "vue-router": "^4.2.4"
   },

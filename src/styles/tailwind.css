@@ -4,7 +4,7 @@
 
 @layer components {
   button {
-    @apply bg-slate-800 text-pink-300 hover:bg-slate-900 hover-text;
+    @apply p-2 bg-slate-800 text-pink-300 hover:bg-slate-900 hover-text disabled:bg-slate-700 disabled:!text-slate-400;
   }
 
   a {

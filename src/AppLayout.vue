@@ -8,6 +8,8 @@ import { useRoomStore } from './stores/rooms';
 import RoomCreate from '@/components/room/RoomCreate.vue'
 import AppVersion from './AppVersion.vue'
 import { usePlayerStore } from './components/player/player-store';
+import PlayerAvatar from './components/player/PlayerAvatar.vue';
+
 const userStore = useUserStore()
 const { isSignedIn } = storeToRefs(userStore)
 const { currentPlayer } = storeToRefs(usePlayerStore())
@@ -27,15 +29,19 @@ watch(isSignedIn, (newValue) => {
     </div>
     <div class="col-span-3 flex flex-col gap-3 bg-slate-700 p-2"
          :class="[isSignedIn ? 'col-span-3' : 'col-span-12']">
-      <user-authentication class=""
-                           :class="{ 'my-auto': !isSignedIn }">
-        <template #sign-in>
-          <span>sign in</span>
-        </template>
-        <template #sign-out>
-          <span>sign out</span>
-        </template>
-      </user-authentication>
+      <div class="flex justify-end gap-4 items-center">
+        <user-authentication class=""
+                             :class="{ 'my-auto': !isSignedIn }">
+          <template #sign-in>
+            <span>sign in</span>
+          </template>
+          <template #sign-out>
+            <span>sign out</span>
+          </template>
+        </user-authentication>
+        <player-avatar v-if="currentPlayer?.avatarUrl"
+                       :url="currentPlayer.avatarUrl" />
+      </div>
       <div v-if="hasPlayer">
         <hr>
         <router-link to="/">Go to Home</router-link>
