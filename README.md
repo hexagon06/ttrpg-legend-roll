@@ -1,4 +1,5 @@
-# rpg-legend-lore
+# TTRPG-Legend-Roll
+
 ```
 yarn dev
 ```
@@ -21,7 +22,7 @@ yarn storybook
 ## Recommended IDE Setup
 
 - [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
-- open the workspace in vscode using the `vue3-boilerplate-library.code-workspace` file.
+- open the workspace in vscode using the `ttrpg-legend-roll.code-workspace` file.
 - open vscode extensions with `Ctrl+Shift+X` and search for `@recommended`. Install all recommended extenstions using the ![cloud icon](https://freeiconshop.com/wp-content/uploads/edd/download-cloud-outline.png)
 
 ## Vite 

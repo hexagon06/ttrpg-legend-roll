@@ -1,8 +1,8 @@
-import { defineStore } from "pinia";
-import { useMessageApi } from "../api";
-import { Message } from "../types";
+import { defineStore } from 'pinia';
+import { useMessageApi } from '../api';
+import { Message } from '../types';
 
-export const useMessageStore = defineStore("message", {
+export const useMessageStore = defineStore('message', {
   state: () => ({
     messages: [] as Message[],
     loading: false,

@@ -1,10 +1,10 @@
-import { auth } from "@/api";
+import { auth } from '@/api';
 // import { createLegendUser, getLegendUserFor } from '@/api/firestore-by-type/legend-user-api'
 // import { LegendUser } from '@/types/legendUser'
-import { onAuthStateChanged, signOut, User } from "firebase/auth";
-import { defineStore } from "pinia";
+import { onAuthStateChanged, signOut, User } from 'firebase/auth';
+import { defineStore } from 'pinia';
 
-export const useUserStore = defineStore("users", {
+export const useUserStore = defineStore('users', {
   state: () => {
     return {
       currentUser: undefined as undefined | User,

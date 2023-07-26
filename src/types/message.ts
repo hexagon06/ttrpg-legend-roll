@@ -1,4 +1,4 @@
-import { IdItem, Reference } from "pony-platypus-firestore-api";
+import { IdItem, Reference } from 'pony-platypus-firestore-api';
 
 export declare type MessageBase = {
   text: string;
