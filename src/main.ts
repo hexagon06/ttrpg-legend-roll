@@ -11,5 +11,3 @@ const pinia = createPinia();
 app.use(pinia);
 app.use(router);
 app.mount('#app');
-
-console.log('version', APP_VERSION);

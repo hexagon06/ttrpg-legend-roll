@@ -1,7 +1,7 @@
 <!-- template for the modal component -->
 <template>
   <div class="fixed z-[9998] top-0 left-0 w-full h-full bg-black bg-opacity-50 transition-opacity flex justify-center">
-    <div class="self-center flex">
+    <div class="self-center bg-slate-900 flex">
       <div class="w-80 mx-0 my-auto px-5 py-5 bg-brown-light-300 shadow-lg transition-all">
         <div class="mt-0">
           <slot name="header">
