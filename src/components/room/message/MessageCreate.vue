@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue';
-import { useMessageStore } from '../../stores/messages';
-import { useUserStore } from '../user/userStore';
+import { useMessageStore } from './messageStore';
+import { useUserStore } from '@/components/user/userStore';
 
 const props = defineProps<{ roomId: string }>()
 

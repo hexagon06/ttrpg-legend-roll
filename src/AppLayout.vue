@@ -4,7 +4,7 @@ import UserAuthentication from './components/user/UserAuthentication.vue'
 import { useUserStore } from './components/user/userStore';
 import RoomList from '@/components/room/RoomList.vue'
 import { computed, watch } from 'vue';
-import { useRoomStore } from './stores/rooms';
+import { useRoomStore } from '@/components/room/roomStore';
 import RoomCreate from '@/components/room/RoomCreate.vue'
 import AppVersion from './AppVersion.vue'
 import { usePlayerStore } from './components/player/player-store';

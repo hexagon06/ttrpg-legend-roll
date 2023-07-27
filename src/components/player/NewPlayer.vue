@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import { Player } from './player';
+import { usePlayerStore } from './player-store';
+import PlayerAvatar from './PlayerAvatar.vue';
 import { useForm } from 'vee-validate';
 import { toTypedSchema } from '@vee-validate/yup';
 import * as yup from 'yup';
-import { usePlayerStore } from './player-store';
-import ValidationInput from '../form/ValidationInput.vue';
-import PlayerAvatar from './PlayerAvatar.vue';
+import ValidationInput from '@/components/form/ValidationInput.vue';
 import { useRouter } from 'vue-router';
 import { ref } from 'vue';
 

@@ -19,9 +19,9 @@ export const useUserStore = defineStore('users', {
   actions: {
     async signOut(): Promise<void> {
       this.isSigningOut = true;
+      usePlayerStore().clear();
       await signOut(auth.auth);
       this.currentUser = undefined;
-      usePlayerStore().clear();
       this.isSigningOut = false;
     },
     async signIn(user: User) {

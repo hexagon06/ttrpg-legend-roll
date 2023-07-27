@@ -1,4 +1,4 @@
-import { createFirebaseClient, auth } from 'pony-platypus-firestore-api';
+import { createFirebaseClient, auth } from './firebase';
 
 export function setupFirebase() {
   const firebaseConfig = {

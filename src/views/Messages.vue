@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import MessageOverview from '../components/message/MessageOverview.vue'
+import MessageOverview from '@/components/room/message/MessageOverview.vue'
 
 defineProps<{ roomId: string }>()
 </script>

@@ -2,7 +2,7 @@
 import { computed, onBeforeUnmount, onMounted, ref, toRefs, watch, watchEffect } from 'vue'
 import MessageDisplay from './MessageDisplay.vue'
 import MessageCreate from './MessageCreate.vue'
-import { useMessageApi } from '@/api';
+import { useMessageApi } from './messageApi';
 import { Message } from '@/types';
 import { Unsubscribe } from 'firebase/firestore';
 import { sortBy } from 'lodash'

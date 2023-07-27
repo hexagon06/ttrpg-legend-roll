@@ -1,9 +1,9 @@
 import { defineStore } from 'pinia';
 import { Player } from './player';
 import { usePlayerApi } from './player-api';
-import { where } from 'firebase/firestore';
-import { useUserStore } from '../user/userStore';
-import { Referenced } from 'pony-platypus-firestore-api';
+import { query, where } from 'firebase/firestore';
+import { useUserStore } from '@/components/user/userStore';
+import { Referenced } from '@/types/data';
 
 export const usePlayerStore = defineStore('player', {
   state: () => {

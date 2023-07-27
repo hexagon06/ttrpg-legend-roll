@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed, toRefs } from 'vue';
-import { Message } from '../../types';
+import { Message } from './message';
 
 const props = defineProps<{ message: Message }>()
 const { message } = toRefs(props)
