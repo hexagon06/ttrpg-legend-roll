@@ -5,12 +5,19 @@ import Room from './components/room/Room.vue';
 import { auth } from './api';
 import { usePlayerStore } from './components/player/player-store';
 import NewPlayer from '@/components/player/NewPlayer.vue';
+import EditPlayer from '@/components/player/Editplayer.vue';
 
 const NEW_PLAYER = 'New Player';
 
 const routes: RouteRecordRaw[] = [
   { path: '/', component: Home, name: 'Home' },
   { path: '/new-here', name: NEW_PLAYER, component: NewPlayer },
+  {
+    path: '/player/:playerId/edit',
+    name: 'player-edit',
+    component: EditPlayer,
+    props: true,
+  },
   {
     path: '/room/:roomId',
     name: 'room',
