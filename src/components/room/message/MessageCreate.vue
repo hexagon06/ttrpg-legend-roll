@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue';
-import { useMessageStore } from '../../stores/messages';
-import { useUserStore } from '@/stores/userStore';
+import { useMessageStore } from './messageStore';
+import { useUserStore } from '@/components/user/userStore';
 
 const props = defineProps<{ roomId: string }>()
 
@@ -38,3 +38,4 @@ async function create() {
     </div>
   </div>
 </template>
+@/components/user/userStore

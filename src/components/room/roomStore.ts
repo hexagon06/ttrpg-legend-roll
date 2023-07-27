@@ -1,8 +1,8 @@
 import { defineStore } from 'pinia';
-import { Room } from '@/types';
-import { useRoomApi } from '@/api/roomApi';
-import { useUserStore } from './userStore';
-import { Referenced } from 'pony-platypus-firestore-api';
+import { Room } from './room';
+import { useRoomApi } from './roomApi';
+import { useUserStore } from '@/components/user/userStore';
+import { Referenced } from '@/types/data';
 
 export const useRoomStore = defineStore('room', {
   state: () => ({

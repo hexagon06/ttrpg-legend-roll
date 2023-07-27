@@ -3,9 +3,21 @@ import Home from './views/Home.vue';
 import Messages from './views/Messages.vue';
 import Room from './components/room/Room.vue';
 import { auth } from './api';
+import { usePlayerStore } from './components/player/player-store';
+import NewPlayer from '@/components/player/NewPlayer.vue';
+import EditPlayer from '@/components/player/Editplayer.vue';
+
+const NEW_PLAYER = 'New Player';
 
 const routes: RouteRecordRaw[] = [
   { path: '/', component: Home, name: 'Home' },
+  { path: '/new-here', name: NEW_PLAYER, component: NewPlayer },
+  {
+    path: '/player/:playerId/edit',
+    name: 'player-edit',
+    component: EditPlayer,
+    props: true,
+  },
   {
     path: '/room/:roomId',
     name: 'room',
@@ -39,6 +51,15 @@ router.beforeEach(async (to, from, next) => {
       next({ name: 'Home' });
       return;
     }
+  }
+  const user = auth.auth.currentUser;
+  if (
+    user &&
+    to.name !== NEW_PLAYER &&
+    !(await usePlayerStore().hasPlayer(user.uid))
+  ) {
+    next({ name: NEW_PLAYER });
+    return;
   }
   next();
 });

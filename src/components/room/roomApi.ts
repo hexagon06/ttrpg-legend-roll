@@ -1,6 +1,6 @@
-import { Room } from '../types';
-import { Api } from 'pony-platypus-firestore-api';
-import { PROJECT_PREFIX } from './apiSetup';
+import { Room } from './room';
+import { Api } from '@/api/firebase';
+import { PROJECT_PREFIX } from '@/api/apiSetup';
 
 const ROOM_COLLECTION = 'rooms';
 

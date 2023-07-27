@@ -3,7 +3,17 @@
 @tailwind utilities;
 
 @layer components {
-    .example {
-      @apply py-2 px-4 bg-blue-500;
-    }
+  button {
+    @apply p-2 bg-slate-800 text-pink-300 hover:bg-slate-900 hover-text disabled:bg-slate-700 disabled:!text-slate-400;
+  }
+
+  a {
+    @apply text-pink-300 hover-text;
+  }
+}
+
+@layer utilities {
+  .hover-text {
+    @apply hover:text-cyan-300 transition-all duration-200;
+  }
 }

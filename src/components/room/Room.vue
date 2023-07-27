@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { onMounted, ref, toRefs, watchEffect } from 'vue';
-import { useRoomApi } from '../../api/roomApi'
-import { Room } from '../../types/room';
+import { useRoomApi } from './roomApi'
+import { Room } from './room';
 
 const props = defineProps<{ roomId: string }>()
 const { roomId } = toRefs(props)

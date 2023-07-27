@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { RouterLink } from 'vue-router';
-import { Referenced } from 'pony-platypus-firestore-api'
-import { Room } from '../../types/room'
+import { Referenced } from '@/types/data'
+import { Room } from './room'
 
 defineProps<{ rooms: Referenced<Room>[] }>()
 </script>
